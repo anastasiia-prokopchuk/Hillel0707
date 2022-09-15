@@ -1,6 +1,8 @@
 package Homeworks.Test20.main;
 
 import Homeworks.Test20.cat_dog.animal.Animal;
+import Homeworks.Test20.cat_dog.cat.Cat;
+import Homeworks.Test20.cat_dog.dog.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +18,7 @@ public class Practice_cat_dog {
         for (Animal animal : animals) {
             animal.sound();
             //expected: I'am a Doc. My name is Tuzik. Gav
-            //expected: I'am a Cat. My name is Vasya. Gav
+            //expected: I'am a Cat. My name is Vasya. Mew
         }
 
 

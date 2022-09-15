@@ -1,9 +1,9 @@
 package Homeworks.Test20.cat_dog.animal;
 
 public class Animal {
-    public String animalType;
-    public String name;
-    public String voice;
+    private final String animalType;
+    private final String name;
+    private final String voice;
 
     public Animal(String animalType, String name, String voice) {
         this.animalType = animalType;

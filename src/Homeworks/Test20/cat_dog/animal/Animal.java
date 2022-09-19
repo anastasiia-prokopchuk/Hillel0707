@@ -11,9 +11,15 @@ public class Animal {
         this.voice = voice;
     }
 
-    public void sound() {
-        System.out.println("I am a " + this.animalType + ". My name is " + this.name + ". " + this.voice);
+    @Override
+    public String toString() {
+        return "I am a " + animalType +
+                ". My name is " + name +
+                ". " + voice;
     }
 
+    public void sound() {
+        System.out.println(this);
+    }
 
 }

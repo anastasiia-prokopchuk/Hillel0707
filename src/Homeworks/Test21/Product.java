@@ -17,8 +17,4 @@ public abstract class Product {
         return number + " " + product + " " + price + " грн";
     }
 
-    public void print() {
-        System.out.println(this);
-    }
-
 }

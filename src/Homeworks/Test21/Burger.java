@@ -13,12 +13,12 @@ public class Burger {
 
     private final List<Product> selectedProducts = new ArrayList<Product>();
     private final List<Product> products = new ArrayList<Product>();
-    private final int price = 50;
+    private final int PRICE = 50;
     String name = "Бургер";
 
     @Override
     public String toString() {
-        return name + " " + price + " грн";
+        return name + " " + PRICE + " грн";
     }
 
     public void burgerPrice() {
@@ -47,7 +47,7 @@ public class Burger {
     }
 
     public void printTotalSum() {
-        int totalSum = price;
+        int totalSum = PRICE;
         for (Product selectedProd : selectedProducts) {
             totalSum += selectedProd.price;
         }

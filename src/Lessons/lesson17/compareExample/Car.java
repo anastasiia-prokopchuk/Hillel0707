@@ -14,9 +14,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "year=" + year +
-                '}';
+        return model + " " + this.year;
     }
 
 //    @Override

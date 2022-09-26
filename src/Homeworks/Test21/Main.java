@@ -13,29 +13,30 @@ public class Main extends Burger {
 
         String anotherProduct;
         boolean addNewProduct;
-        boolean selectAnotherProduct;
+        boolean choiceMade;
+
         do {
             System.out.println("Введите номер или название продукта.");
             Scanner scanner = new Scanner(System.in);
-            String enterProduct = scanner.nextLine();
-            burger.addProduct(enterProduct);
+            String enteredProduct = scanner.nextLine();
+            burger.addProduct(enteredProduct);
 
             do {
                 System.out.println("Вы хотите добавить ингридиент? Да/Нет");
-                Scanner scannerAnother = new Scanner(System.in);
-                anotherProduct = scannerAnother.nextLine();
+                Scanner scannerChoice = new Scanner(System.in);
+                anotherProduct = scannerChoice.nextLine();
 
-                selectAnotherProduct = true;
+                choiceMade = true;
                 if (anotherProduct.equalsIgnoreCase("да")) {
                     addNewProduct = true;
                 } else if (anotherProduct.equalsIgnoreCase("нет")) {
                     addNewProduct = false;
                 } else {
                     System.out.println("Вы введи неверные данные. Введите 'Да' или 'Нет'.");
+                    choiceMade = false;
                     addNewProduct = true;
-                    selectAnotherProduct = false;
                 }
-            } while (!selectAnotherProduct);
+            } while (!choiceMade);
 
         } while (addNewProduct);
 

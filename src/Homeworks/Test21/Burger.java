@@ -32,10 +32,10 @@ public class Burger {
         }
     }
 
-    public void addProduct(String addProduct) {
+    public void addProduct(String addedProduct) {
         boolean productNotSelected = true;
         for (Product pr : products) {
-            if (pr.number.equals(addProduct) || pr.product.equalsIgnoreCase(addProduct)) {
+            if (pr.number.equals(addedProduct) || pr.product.equalsIgnoreCase(addedProduct)) {
                 productNotSelected = false;
                 System.out.println("Вы выбрали " + pr.product);
                 selectedProducts.add(pr);

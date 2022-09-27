@@ -32,13 +32,24 @@ public class Burger {
         }
     }
 
-    public void addProduct(String addedProduct) {
+    public void addProduct(String addedProduct, boolean multipleChoice) {
         boolean productNotSelected = true;
         for (Product pr : products) {
             if (pr.number.equals(addedProduct) || pr.product.equalsIgnoreCase(addedProduct)) {
                 productNotSelected = false;
                 System.out.println("Вы выбрали " + pr.product);
-                selectedProducts.add(pr);
+
+                if (multipleChoice) {
+                    selectedProducts.add(pr);
+                } else {
+                    if (selectedProducts.contains(pr)) {
+                        System.out.println("Этот продукт уже добавлен.");
+                    } else {
+                        selectedProducts.add(pr);
+                    }
+                }
+
+
             }
         }
         if (productNotSelected) {

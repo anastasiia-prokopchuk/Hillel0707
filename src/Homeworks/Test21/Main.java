@@ -14,12 +14,13 @@ public class Main extends Burger {
         String anotherProduct;
         boolean addNewProduct;
         boolean choiceMade;
+        boolean multipleChoice = false;
 
         do {
             System.out.println("Введите номер или название продукта.");
             Scanner scanner = new Scanner(System.in);
             String enteredProduct = scanner.nextLine();
-            burger.addProduct(enteredProduct);
+            burger.addProduct(enteredProduct, multipleChoice);
 
             do {
                 System.out.println("Вы хотите добавить ингридиент? Да/Нет");

@@ -1,15 +1,15 @@
-package Homeworks.Test22;
+package Homeworks.Test23;
 
 import java.util.Scanner;
 
-public class Individual extends Client {
+public class LegalEntity extends Client {
 
 
-    public Individual(double accountSum) {
+    public LegalEntity(double accountSum) {
         super(accountSum);
     }
 
-    int withdrawalFeePercentage = 0;
+    int withdrawalFeePercentage = 1;
     int refillFeePercentage = 0;
 
     @Override

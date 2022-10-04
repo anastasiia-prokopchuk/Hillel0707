@@ -1,4 +1,4 @@
-package Homeworks.Test22;
+package Homeworks.Test23;
 
 public abstract class Client {
     public Client(double accountSum) {

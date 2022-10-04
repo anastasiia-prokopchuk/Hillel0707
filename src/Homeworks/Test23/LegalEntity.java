@@ -9,8 +9,8 @@ public class LegalEntity extends Client {
         super(accountSum);
     }
 
-    int withdrawalFeePercentage = 1;
-    int refillFeePercentage = 0;
+    double withdrawalFeePercentage = 1;
+    double refillFeePercentage = 0;
 
     @Override
     void refillAccount() {

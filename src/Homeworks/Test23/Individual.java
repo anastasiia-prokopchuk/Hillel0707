@@ -9,8 +9,8 @@ public class Individual extends Client {
         super(accountSum);
     }
 
-    int withdrawalFeePercentage = 0;
-    int refillFeePercentage = 0;
+    double withdrawalFeePercentage = 0;
+    double refillFeePercentage = 0;
 
     @Override
     void refillAccount() {

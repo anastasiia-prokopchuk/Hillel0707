@@ -15,7 +15,7 @@ public class SelfEmployed extends Client {
     @Override
     void refillAccount() {
         System.out.print("Введите сумму пополнения: ");
-        int refillSum = new Scanner(System.in).nextInt();
+        double refillSum = new Scanner(System.in).nextDouble();
 
         if (refillSum < boundarySum) {
             accountSum += refillSum * (1 - refillFeePercentage * 0.01);
@@ -27,7 +27,7 @@ public class SelfEmployed extends Client {
     @Override
     void withdrawalFromAccount() {
         System.out.print("Введите сумму снятия: ");
-        int withdrawalSum = new Scanner(System.in).nextInt();
+        double withdrawalSum = new Scanner(System.in).nextDouble();
         accountSum -= withdrawalSum * (1 - withdrawalFeePercentage * 0.01);
     }
 

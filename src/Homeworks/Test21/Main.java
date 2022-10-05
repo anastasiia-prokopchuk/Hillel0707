@@ -10,7 +10,7 @@ public class Main extends Burger {
         Burger burger = new Burger();
         burger.burgerPrice();
         burger.printAllProduct();
-        burger.burgerConstructor();
-        burger.printTotalSum();
+        BurcerConstrucror burcerConstrucror = new BurcerConstrucror();
+        burcerConstrucror.addNewProduct();
     }
 }

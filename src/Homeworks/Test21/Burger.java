@@ -2,7 +2,6 @@ package Homeworks.Test21;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class Burger {
 
@@ -12,8 +11,8 @@ public class Burger {
         products.add(new Cutlet());
     }
 
-    private final List<Product> selectedProducts = new ArrayList<Product>();
-    private final List<Product> products = new ArrayList<Product>();
+    private final List<Product> selectedProducts = new ArrayList<>();
+    private final List<Product> products = new ArrayList<>();
     private final int PRICE = 50;
     String name = "Бургер";
 
@@ -31,38 +30,6 @@ public class Burger {
         for (Product product : products) {
             System.out.println(product);
         }
-    }
-
-    public void burgerConstructor() {
-        String anotherProduct;
-        boolean addNewProduct;
-        boolean choiceMade;
-        boolean multipleChoice = false;
-
-        do {
-            System.out.println("Введите номер или название продукта.");
-            Scanner scanner = new Scanner(System.in);
-            String enteredProduct = scanner.nextLine();
-            addProduct(enteredProduct, multipleChoice);
-
-            do {
-                System.out.println("Вы хотите добавить ингридиент? Да/Нет");
-                Scanner scannerChoice = new Scanner(System.in);
-                anotherProduct = scannerChoice.nextLine();
-
-                choiceMade = true;
-                if (anotherProduct.equalsIgnoreCase("да")) {
-                    addNewProduct = true;
-                } else if (anotherProduct.equalsIgnoreCase("нет")) {
-                    addNewProduct = false;
-                } else {
-                    System.out.println("Вы введи неверные данные. Введите 'Да' или 'Нет'.");
-                    choiceMade = false;
-                    addNewProduct = true;
-                }
-            } while (!choiceMade);
-
-        } while (addNewProduct);
     }
 
 

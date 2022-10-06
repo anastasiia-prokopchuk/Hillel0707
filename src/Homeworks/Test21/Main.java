@@ -1,6 +1,7 @@
 package Homeworks.Test21;
 
-import java.util.Scanner;
+import java.util.List;
+
 
 public class Main extends Burger {
 
@@ -11,6 +12,7 @@ public class Main extends Burger {
         burger.burgerPrice();
         burger.printAllProduct();
         BurcerConstrucror burcerConstrucror = new BurcerConstrucror();
-        burcerConstrucror.addNewProduct();
+        List<Product> productList = burcerConstrucror.addNewProduct();
+        burger.printTotalSum(productList);
     }
 }

@@ -33,7 +33,7 @@ public class Burger {
     }
 
 
-    public void addProduct(String addedProduct, boolean multipleChoice) {
+    public List<Product> addProduct(String addedProduct, boolean multipleChoice) {
         boolean productNotSelected = true;
         for (Product pr : products) {
             if (pr.number.equals(addedProduct) || pr.product.equalsIgnoreCase(addedProduct)) {
@@ -55,9 +55,11 @@ public class Burger {
         if (productNotSelected) {
             System.out.println("Такого продукта нет");
         }
+
+        return selectedProducts;
     }
 
-    public void printTotalSum() {
+    public void printTotalSum(List<Product> selectedProducts) {
         int totalSum = PRICE;
         for (Product selectedProd : selectedProducts) {
             totalSum += selectedProd.price;

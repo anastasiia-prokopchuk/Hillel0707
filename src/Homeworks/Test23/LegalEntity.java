@@ -23,7 +23,7 @@ public class LegalEntity extends Client {
     void withdrawalFromAccount() {
         System.out.print("Введите сумму снятия: ");
         double withdrawalSum = new Scanner(System.in).nextDouble();
-        accountSum -= withdrawalSum * (1 - withdrawalFeePercentage * 0.01);
+        accountSum -= withdrawalSum * (1 + withdrawalFeePercentage * 0.01);
     }
 
     @Override

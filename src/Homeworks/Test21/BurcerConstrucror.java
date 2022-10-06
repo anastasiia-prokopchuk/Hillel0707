@@ -1,22 +1,25 @@
 package Homeworks.Test21;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class BurcerConstrucror {
 
-    public void addNewProduct() {
+    public List<Product> addNewProduct() {
         String anotherProduct;
         boolean addNewProduct;
         boolean choiceMade;
         boolean multipleChoice = false;
         Burger burger = new Burger();
 
+        List<Product> productList;
+
         do {
             System.out.println("Введите номер или название продукта.");
             Scanner scanner = new Scanner(System.in);
             String enteredProduct = scanner.nextLine();
 
-            burger.addProduct(enteredProduct, multipleChoice);
+            productList = burger.addProduct(enteredProduct, multipleChoice);
 
             do {
                 System.out.println("Вы хотите добавить ингридиент? Да/Нет");
@@ -37,7 +40,9 @@ public class BurcerConstrucror {
 
         } while (addNewProduct);
 
-        burger.printTotalSum();
+
+        return productList;
+
     }
 
 
